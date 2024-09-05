@@ -8,7 +8,7 @@ import envLoader from './env_loader';
  */
 class DBClient {
   /**
-   * new DBClient instance
+   * Creates a new DBClient instance.
    */
   constructor() {
     envLoader();
@@ -22,7 +22,7 @@ class DBClient {
   }
 
   /**
-   * s
+   * Checks if this client's connection to the MongoDB server is active.
    * @returns {boolean}
    */
   isAlive() {
@@ -30,7 +30,7 @@ class DBClient {
   }
 
   /**
-   * s
+   * Retrieves the number of users in the database.
    * @returns {Promise<Number>}
    */
   async nbUsers() {
@@ -38,7 +38,7 @@ class DBClient {
   }
 
   /**
-   * Rs
+   * Retrieves the number of files in the database.
    * @returns {Promise<Number>}
    */
   async nbFiles() {
@@ -46,7 +46,7 @@ class DBClient {
   }
 
   /**
-   * s
+   * Retrieves a reference to the `users` collection.
    * @returns {Promise<Collection>}
    */
   async usersCollection() {
@@ -54,7 +54,7 @@ class DBClient {
   }
 
   /**
-   * s
+   * Retrieves a reference to the `files` collection.
    * @returns {Promise<Collection>}
    */
   async filesCollection() {
